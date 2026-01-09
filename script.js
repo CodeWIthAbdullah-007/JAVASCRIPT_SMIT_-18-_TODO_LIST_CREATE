@@ -2,31 +2,33 @@ var ul = document.getElementById('ul');
 
 function todo() {
     var input = document.getElementById('inp');
-    
-    // create li
+
+    if(input.value.trim() === "") return;
+
     var li = document.createElement('li');
-    li.innerHTML = input.value;
+    var text = document.createTextNode(input.value);
+    li.appendChild(text);
     ul.appendChild(li);
 
-    // delete btn
     var dltBtn = document.createElement('button');
     dltBtn.innerHTML = 'Delete';
     li.appendChild(dltBtn);
-    dltBtn.className = 'dltBtn'
+    dltBtn.className = 'dltBtn';
 
     dltBtn.addEventListener('click', function() {
-        dlt(this);        
+        dlt(this);
     });
 
-    // edit btn
     var editBtn = document.createElement('button');
     editBtn.innerHTML = 'Edit';
     li.appendChild(editBtn);
-    editBtn.className = 'editBtn'
+    editBtn.className = 'editBtn';
 
-    editBtn.addEventListener('click', function(){
+    editBtn.addEventListener('click', function() {
         edit(this);
-    })
+    });
+
+    input.value = "";
 }
 
 function dlt(e) {
@@ -35,6 +37,15 @@ function dlt(e) {
 
 function edit(e) {
     var oldValue = e.parentNode.firstChild.nodeValue;
-    var newValue = prompt('new Value', oldValue)
-    e.parentNode.firstChild.nodeValue = newValue
+    var newValue = prompt('New Value', oldValue);
+    if(newValue && newValue.trim() !== ""){
+        e.parentNode.firstChild.nodeValue = newValue;
+    }
 }
+
+var input = document.getElementById("inp");
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        todo();
+    }
+});
