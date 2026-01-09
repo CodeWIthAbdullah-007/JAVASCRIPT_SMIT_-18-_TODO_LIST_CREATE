@@ -1,5 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #14141f;
+    color: #fff;
+    margin: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inp {
+    width: 270px;
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #5a5af0;
+    border-radius: 6px;
+    background: #1e1e2d;
+    color: #fff;
+}
+
+button {
+    padding: 10px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background: #5a5af0;
+    color: white;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #7373ff;
+}
+
+ul {
+    width: 330px;
+    padding: 0;
+    margin-top: 28px;
+}
+
+li {
+    background: #1e1e2d;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border-left: 4px solid #5a5af0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
+
+li button {
+    margin-left: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
 .dltBtn {
-    background-color: red;
-    border-radius: 15px;
-    outline: none;
+    background: #e63939;
+}
+
+.dltBtn:hover {
+    background: #ff5c5c;
+}
+
+.editBtn {
+    background: #f0c14b;
+    color: #000;
+}
+
+.editBtn:hover {
+    background: #ffe08a;
 }
