@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <input type="text" id="inp">
-    <button onclick="todo()">Todo</button>
-
-    <ul id="ul"></ul>
-
+<body class="light-mode">
+    <div class="center-container">
+        <div class="todo-container">
+            <h1>Todo List</h1>
+            <div class="mode-toggle">
+                <button id="darkBtn">🌙 Dark</button>
+                <button id="lightBtn">☀️ Light</button>
+            </div>
+            <div class="input-group">
+                <input type="text" id="inp" placeholder="Add a new task...">
+                <button onclick="todo()">Add</button>
+            </div>
+            <ul id="ul"></ul>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
